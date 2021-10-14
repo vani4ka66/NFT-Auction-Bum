@@ -4,15 +4,16 @@ import logoMuted from "../../../public/images/logo-muted.svg"
 
 
 export default class Logo extends React.Component {
-    constructor(){
+    constructor(type){
         super()
 
-        this.state = {type: "default"};
-        // this.type = 'default';
+        this.state = {type: type};
     }
 
     componentDidMount(){
-        this.setState(this.type)
+        this.setState({
+            type: "default"
+          });
     }
 
     render() {
