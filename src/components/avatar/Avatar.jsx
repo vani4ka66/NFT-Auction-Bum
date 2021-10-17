@@ -4,7 +4,7 @@ import styles from "./Avatar.module.scss";
 import classNames from "classnames";
 
 
-export default function Avatar({size="90", url="/images/avatar.png", verified=false}) {
+export default function Avatar({size=90, url="/images/avatar.png", verified=false}) {
 
     const [width, setWidth] = useState(size)
     const [height, setHeight] = useState(size)
