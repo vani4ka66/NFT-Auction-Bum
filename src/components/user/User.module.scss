@@ -12,13 +12,15 @@
 }
 
 .user{
-
+    .name {
+        font-weight: 600;
+        font-size: 1rem;
+       }
+       
+       .info {
+           color: colors.$secondary_main;
+           font-size: 1rem;
+       }
 }
 
-.name {
- font-weight: 600;
-}
 
-.info {
-    color: colors.$secondary_main;
-}
