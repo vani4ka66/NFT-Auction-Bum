@@ -6,7 +6,7 @@ import { Grid } from "@mui/material";
 
 
 export default function User({name='', info='', avatar='', size, verified=false}) {
-    const [width, setWhidth] = useState(55)
+    const [width, setWhidth] = useState('55rem')
 
   return (
         <Grid container className={classNames(styles.user)} spacing={2}>
