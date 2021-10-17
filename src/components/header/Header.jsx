@@ -25,7 +25,6 @@ export default function Header() {
                     <Button variant="text">EXPLORE</Button>
                 </Grid >
             </Grid >
-        
       </Container>
     </div>
   );
