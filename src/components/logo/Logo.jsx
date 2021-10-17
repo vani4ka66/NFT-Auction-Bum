@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import classNames from "classnames";
 // import styles from "./Logo.module.scss";
 
-export default function Logo(props) {
+export default function Logo() {
 
-  // const [typeA, setType] = useState('default')
+  const [type, setType] = useState('default')
 
   return (
     <div>
@@ -12,7 +12,7 @@ export default function Logo(props) {
       
       <img src="/images/logo.svg" />
 
-      {props.type === "muted" && <img src="/images/logo-muted.svg" />} 
+      {type === "muted" && <img src="/images/logo-muted.svg" />} 
      
 </div>
   );
