@@ -1,1 +1,1 @@
-.wrapper{padding:100px;background-color:#4e24f2}.container{display:flex !important;align-items:center;justify-content:center}.name{font-weight:600}.info{color:#24f25e}
+.wrapper{padding:100px;background-color:#4e24f2}.container{display:flex !important;align-items:center;justify-content:center}.user .name{font-weight:600;font-size:1rem}.user .info{color:#24f25e;font-size:1rem}
