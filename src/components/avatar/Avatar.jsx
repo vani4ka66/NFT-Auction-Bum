@@ -6,18 +6,16 @@ import classNames from "classnames";
 
 export default function Avatar({size=90, url="/images/avatar.png", verified=false}) {
 
-    const [width, setWidth] = useState(size)
-    const [height, setHeight] = useState(size)
-
+    const [width, setWidth] = useState(90)
+    const [height, setHeight] = useState(90)
 
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
-        <div className={classNames(styles.avatar)}>
-            <img width={width}  height={height} className="image" src={url} alt="" />
+        <div className="avatar" >
+        <img width={size} height={size} className="image" src={url} alt="" />
             {verified && <img className="badge" src="/images/verified.svg" alt="" />}
         </div>
       
     </Container>
   );
 }
-
