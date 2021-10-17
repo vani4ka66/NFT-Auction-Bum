@@ -6,7 +6,7 @@ import Avatar from "../avatar/Avatar";
 import { Grid } from "@mui/material";
 
 
-export default function User({name='Pesho', info='134 dffd', avatar='', size,verified=false}) {
+export default function User({name='', info='', avatar='', size,verified=false}) {
     const [width, setWhidth] = useState("55rem")
 
   return (
