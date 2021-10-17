@@ -4,13 +4,9 @@ import classNames from "classnames";
 
 export default function Logo({type="default"}) {
 
-  // const [type, setType] = useState('default')
-
   return (
     <div>
       {type === "default" && <img src="/images/logo.svg" />}
-      
-      {/* <img src="/images/logo.svg" /> */}
 
       {type === "muted" && <img src="/images/logo-muted.svg" />} 
      
