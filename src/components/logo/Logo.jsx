@@ -10,7 +10,9 @@ export default function Logo(type) {
 
   return (
     <div>
-    {type === "default" && <img className={classNames(styles.logo)} src="../../../public/images/logo.svg" />}
+    {/* {type == "default" && <img src="./logos.svg" />} */}
+    <img src="./logos.svg" />
+
     {type === "muted" && <img src="../../../public/images/logo-muted.svg" />} 
      
 </div>
