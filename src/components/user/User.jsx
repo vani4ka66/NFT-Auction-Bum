@@ -5,8 +5,8 @@ import Avatar from "../avatar/Avatar";
 import { Grid } from "@mui/material";
 
 
-export default function User({name='', info='', avatar='', size="55rem", verified=false}) {
-    const [w, setW] = useState("55rem");
+export default function User({name='', info='', avatar='', size=55, verified=false}) {
+    const [w, setW] = useState(55);
 
   return (
         <Grid container className={classNames(styles.user)} spacing={2}>
