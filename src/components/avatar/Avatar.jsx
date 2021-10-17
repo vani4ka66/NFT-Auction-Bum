@@ -6,8 +6,8 @@ import classNames from "classnames";
 
 export default function Avatar({size=90, url="/images/avatar.png", verified=false}) {
 
-    const [width, setWidth] = useState(size)
-    const [height, setHeight] = useState(size)
+    const [width, setWidth] = useState(90)
+    const [height, setHeight] = useState(90)
     
 
     // setWidth("500")
