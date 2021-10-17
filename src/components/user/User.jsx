@@ -6,7 +6,7 @@ import Avatar from "../avatar/Avatar";
 import { Grid } from "@mui/material";
 
 
-export default function User({name='Pesho', info='134 items', avatar='', size='55rem',verified=false}) {
+export default function User({name='', info='', avatar='', size='55rem',verified=false}) {
 
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
