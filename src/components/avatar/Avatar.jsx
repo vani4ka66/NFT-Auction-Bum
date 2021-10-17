@@ -8,10 +8,6 @@ export default function Avatar({size=90, url="/images/avatar.png", verified=fals
 
     const [width, setWidth] = useState(90)
     const [height, setHeight] = useState(90)
-    
-
-    // setWidth("500")
-
 
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
@@ -23,4 +19,3 @@ export default function Avatar({size=90, url="/images/avatar.png", verified=fals
     </Container>
   );
 }
-
