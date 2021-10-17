@@ -1,13 +1,16 @@
 import React, { useState } from "react"
+import classNames from "classnames";
 import logo from "../../../public/images/logo.svg"
 import logoMuted from "../../../public/images/logo-muted.svg"
+// import styles from "./Logo.module.scss";
 
-export default function Logo() {
-  const [type, setType] = useState('default')
+export default function Logo(type) {
+
+  // const [typeA, setType] = useState('default')
 
   return (
     <div>
-    {/* {type === "default" && <img src="../../../public/images/logo.svg" />} */}
+    {/* {props.type === "default" && <img className={classNames(styles.logo)} />} */}
     {/* {type === "muted" && <img src={logoMuted} />}  */}
     {type === "default" && (<svg width="135" height="62" viewBox="0 0 135 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="135" height="62" fill="#4E24F2"/>
