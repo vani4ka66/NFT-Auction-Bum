@@ -1,21 +1,18 @@
-import { height, width } from "@mui/material/node_modules/@mui/system";
 import React from "react"
-import Badge from "../../../public/images/verified.svg"
+import Container from "@mui/material/Container";
+import styles from "./Avatar.module.scss";
+import classNames from "classnames";
 
-export default class Avatar extends React.Component {
-    constructor(width = 90, height = 90,url = '', verified = false){
-        this.size = {
-            width: width,
-            height: height
-        }
-        this.url = url;
-        this.verified = verified
-    }
 
-    render() {
-      return <div className="avatar" style={width = this.size.width, height = this.size.height}>
-                <img src="../../../public/images/avatar.png" className="image" alt="" />
-                <img className="badge" src={Badge} />
-            </div>;
-    }
-  }
+export default function Avatar({size, url, verified=false}) {
+  return (
+    <Container className={classNames(styles.container)} maxWidth="xl">
+        <div  className={classNames(styles.avatar)}>
+            <img className="image" src="/images/avatar.png" alt="" />
+            <img className="badge" src="/images/verified.svg" alt="" />
+        </div>
+      
+    </Container>
+  );
+}
+
