@@ -4,16 +4,16 @@ import logo from "../../../public/images/logo.svg"
 import logoMuted from "../../../public/images/logo-muted.svg"
 // import styles from "./Logo.module.scss";
 
-export default function Logo(type) {
+export default function Logo(type="default") {
 
   // const [typeA, setType] = useState('default')
 
   return (
     <div>
-    {/* {type == "default" && <img src="./logos.svg" />} */}
-    <img src="./logos.svg" />
+    {/* {type === "default" && <img src="/images/logo-muted.svg" />} */}
+    <img src="/images/logo.svg" />
 
-    {type === "muted" && <img src="../../../public/images/logo-muted.svg" />} 
+    {type === "muted" && <img src="/images/logo-muted.svg" />} 
      
 </div>
   );
