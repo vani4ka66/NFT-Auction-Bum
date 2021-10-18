@@ -14,11 +14,10 @@ import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency, user}) {
+export default function Cardd({name="fdkflk", likes, mediaUrl, price, currency, user}) {
     const [like, setLike] = useState(0)
 
     useEffect(() => {
-
         let reg;
 
         if(like.toString().length > 9){
