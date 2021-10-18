@@ -12,8 +12,6 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency, user}) {
@@ -25,12 +23,12 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
 
         if(like.toString().length > 9){
             reg = new RegExp(/(\d{9}$)/);
-            setLike(like.toString().replace(reg, 'B').toLowerCase())
+            setLike(like.toString().replace(reg, 'B'))
             return
         }
         if(like.toString().length > 6){
             reg = new RegExp(/(\d{6}$)/);
-            setLike(like.toString().replace(reg, 'M').toLowerCase())
+            setLike(like.toString().replace(reg, 'M'))
             return
         }
         if(like.toString().length > 3){
@@ -41,18 +39,12 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
       }, []);
 
   return (
-    <div className={classNames(styles.wrapper)}>
         <Card sx={{ maxWidth: 345 }}>
             <CardHeader
                 avatar={<Avatar {...user} />}
-                // title="Shrimp and Chorizo Paella"
             />
-            <CardMedia
-                className={classNames(styles.media)}
-                component="img"
-                image="/images/nft.jpg"
-                alt="pic"
-            />
+           
+            <img className={classNames(styles.media)} src="/images/nft.jpg" alt="pic" />
 
             <CardActions color="text.secondary">
                 <CardContent variant="body2" color="text.secondary">
@@ -69,6 +61,5 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
 
            
         </Card>
-    </div>
   );
 }
