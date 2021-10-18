@@ -34,7 +34,7 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
            
                 <IconButton aria-label="add to favorites" >
                     <FavoriteIcon className="likes" />
-                    <span>{millify(like).toLowerCase()}</span> 
+                    <span>{millify(like)}</span> 
                 </IconButton>
             </CardActions>
         </Card>
