@@ -1,5 +1,5 @@
 // import Paper from "@mui/material/Paper";
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Container from "@mui/material/Container";
 import styles from "./Card.module.scss";
 import classNames from "classnames";
@@ -16,18 +16,35 @@ import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export default function Card1({name, likes=0, mediaUrl, price, currency, user}) {
+export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency, user}) {
     const [like, setLike] = useState(0)
-    user = {
-        verified: false,
-        avatarUrl: ""
-    }
+
+    useEffect(() => {
+
+        let reg;
+
+        if(like.toString().length > 9){
+            reg = new RegExp(/(\d{9}$)/);
+            setLike(like.toString().replace(reg, 'B'))
+            return
+        }
+        if(like.toString().length > 6){
+            reg = new RegExp(/(\d{6}$)/);
+            setLike(like.toString().replace(reg, 'M'))
+            return
+        }
+        if(like.toString().length > 3){
+            reg = new RegExp(/(\d{3}$)/);
+            setLike(like.toString().replace(reg, 'K'))
+            return
+        }
+      }, []);
 
   return (
     <div className={classNames(styles.wrapper)}>
         <Card sx={{ maxWidth: 345 }}>
             <CardHeader
-                avatar={<Avatar verified={user.verified} url={user.avatarUrl} />}
+                avatar={<Avatar className="badge" />}
                 // title="Shrimp and Chorizo Paella"
             />
             <CardMedia
@@ -37,17 +54,20 @@ export default function Card1({name, likes=0, mediaUrl, price, currency, user}) 
                 alt="pic"
             />
 
-            <CardActions >
-                    <Typography variant="body2" color="text.secondary">
-                        <div className="title"></div>
-                        <div className="name">{name}</div>
-                        <div className="price">~{price}  {currency}</div>
-                    </Typography>
+            <CardActions color="text.secondary">
+                <CardContent variant="body2" color="text.secondary">
+                    <div className="title"></div>
+                    <div className="name">{name}</div>
+                    <div className="price">~{price}  {currency}</div>
+                </CardContent>
 
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon className="likes" /> {likes}
-                    </IconButton>
+                <IconButton aria-label="add to favorites" >
+                    <FavoriteIcon className="likes" />
+                    <span color="text.primary">{like}</span> 
+                </IconButton>
             </CardActions>
+
+           
         </Card>
     </div>
   );

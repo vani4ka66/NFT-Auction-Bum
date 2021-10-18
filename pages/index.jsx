@@ -1,7 +1,7 @@
 
-import Card from "../src/components/card/Card";
+import CardWrapper from "../src/components/card/Card";
 
 
 export default function Index() {
-  return <Card />;
+  return <CardWrapper />;
 }
