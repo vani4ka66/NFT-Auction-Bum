@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import styles from "./Card.module.scss";
 import classNames from "classnames";
 import Avatar from "../../components/avatar/Avatar"
-import Card from '@mui/material/Card';
+import MuiCard from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
@@ -12,12 +12,12 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import millify from "millify";
 import { Chip } from "@mui/material";
 
-export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency, user}) {
+export default function Card({name="fdkflk", likes=0, mediaUrl, price, currency, user}) {
 
     const [like, setLike] = useState(0)
 
   return (
-        <Card sx={{ maxWidth: 345 }}>
+        <MuiCard sx={{ maxWidth: 345 }}>
             <CardHeader
                 avatar={<Avatar {...user} />}
             />
@@ -33,10 +33,10 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
 
            
                 <IconButton aria-label="add to favorites" >
-                    <FavoriteIcon className="likes" />
-                    <span>{millify(like)}</span> 
+                    <FavoriteIcon  />
+                    <span className="likes">{millify(likes)}</span> 
                 </IconButton>
             </CardActions>
-        </Card>
+        </MuiCard>
   );
 }
