@@ -13,7 +13,7 @@ import millify from "millify";
 
 export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency, user}) {
 
-    const [like, setLike] = useState(0)
+    const [like, setLike] = useState(151550)
 
   return (
         <Card sx={{ maxWidth: 345 }}>
@@ -32,7 +32,7 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
 
                 <IconButton aria-label="add to favorites" >
                     <FavoriteIcon className="likes" />
-                    <span>{millify(like)}</span> 
+                    <span>{millify(like).toLowerCase()}</span> 
                 </IconButton>
             </CardActions>
         </Card>
