@@ -15,7 +15,8 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export default function Cardd({name="fdkflk", likes, mediaUrl, price, currency, user}) {
-    const [like, setLike] = useState(0)
+    
+    const [like, setLike] = useState("0")
 
     useEffect(() => {
         let reg;
@@ -35,6 +36,7 @@ export default function Cardd({name="fdkflk", likes, mediaUrl, price, currency, 
             setLike(like.toString().replace(reg, 'K').toLowerCase())
             return
         }
+        
       }, []);
 
   return (
@@ -54,7 +56,7 @@ export default function Cardd({name="fdkflk", likes, mediaUrl, price, currency, 
 
                 <IconButton aria-label="add to favorites" >
                     <FavoriteIcon className="likes" />
-                    <span color="text.primary">{like}</span> 
+                    <span color="text.primary">{like.toString()}</span> 
                 </IconButton>
             </CardActions>
         </Card>
