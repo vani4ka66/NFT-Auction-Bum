@@ -12,7 +12,7 @@ export default function Avatar({size=90, url="/images/avatar.png", verified=fals
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
         <div className="avatar" >
-        <img width={size} height={size} className="image" src={url} alt="" />
+        <img width={size} height={size} className={classNames(styles.image)} src={url} alt="" />
             {verified && <img className="badge" src="/images/verified.svg" alt="" />}
         </div>
       
