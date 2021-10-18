@@ -12,15 +12,13 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency, user}) {
-    const [like, setLike] = useState(0)
+export default function Cardd({name="fdkflk", likes, mediaUrl, price, currency, user}) {
+    
+    const [like, setLike] = useState("0")
 
     useEffect(() => {
-
         let reg;
 
         if(like.toString().length > 9){
@@ -35,24 +33,19 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
         }
         if(like.toString().length > 3){
             reg = new RegExp(/(\d{3}$)/);
-            setLike(like.toString().replace(reg, 'K'))
+            setLike(like.toString().replace(reg, 'K').toLowerCase())
             return
         }
+        
       }, []);
 
   return (
-    <div className={classNames(styles.wrapper)}>
         <Card sx={{ maxWidth: 345 }}>
             <CardHeader
-                avatar={<Avatar className="badge" />}
-                // title="Shrimp and Chorizo Paella"
+                avatar={<Avatar {...user} />}
             />
-            <CardMedia
-                className={classNames(styles.media)}
-                component="img"
-                image="/images/nft.jpg"
-                alt="pic"
-            />
+           
+            <img className={classNames(styles.media)} src="/images/nft.jpg" alt="pic" />
 
             <CardActions color="text.secondary">
                 <CardContent variant="body2" color="text.secondary">
@@ -63,12 +56,9 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
 
                 <IconButton aria-label="add to favorites" >
                     <FavoriteIcon className="likes" />
-                    <span color="text.primary">{like}</span> 
+                    <span color="text.primary">{like.toString()}</span> 
                 </IconButton>
             </CardActions>
-
-           
         </Card>
-    </div>
   );
 }
