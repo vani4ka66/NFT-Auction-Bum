@@ -25,17 +25,17 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
 
         if(like.toString().length > 9){
             reg = new RegExp(/(\d{9}$)/);
-            setLike(like.toString().replace(reg, 'B'))
+            setLike(like.toString().replace(reg, 'B').toLowerCase())
             return
         }
         if(like.toString().length > 6){
             reg = new RegExp(/(\d{6}$)/);
-            setLike(like.toString().replace(reg, 'M'))
+            setLike(like.toString().replace(reg, 'M').toLowerCase())
             return
         }
         if(like.toString().length > 3){
             reg = new RegExp(/(\d{3}$)/);
-            setLike(like.toString().replace(reg, 'K'))
+            setLike(like.toString().replace(reg, 'K').toLowerCase())
             return
         }
       }, []);
@@ -44,7 +44,7 @@ export default function Cardd({name="fdkflk", likes=0, mediaUrl, price, currency
     <div className={classNames(styles.wrapper)}>
         <Card sx={{ maxWidth: 345 }}>
             <CardHeader
-                avatar={<Avatar className="badge" />}
+                avatar={<Avatar {...user} />}
                 // title="Shrimp and Chorizo Paella"
             />
             <CardMedia
