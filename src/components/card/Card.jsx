@@ -57,8 +57,6 @@ export default function Cardd({name="fdkflk", likes, mediaUrl, price, currency, 
                     <span color="text.primary">{like}</span> 
                 </IconButton>
             </CardActions>
-
-           
         </Card>
   );
 }
