@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import styles from "./Card.module.scss";
 import classNames from "classnames";
 import Avatar from "../../components/avatar/Avatar"
 import MuiCard from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import millify from "millify";
-import { Chip } from "@mui/material";
 
-export default function Card({name="fdkflk", likes=0, mediaUrl, price, currency, user}) {
+export default function Card({name="", title, likes=0, mediaUrl, price, currency, user}) {
 
     const [like, setLike] = useState(0)
 
@@ -26,7 +24,7 @@ export default function Card({name="fdkflk", likes=0, mediaUrl, price, currency,
 
             <CardActions color="text.secondary">
                 <CardContent variant="body2" color="text.secondary">
-                    <div className="title"></div>
+                    <div className="title">{title}</div>
                     <div className="name">{name}</div>
                     <div className="price">~{price}  {currency}</div>
                 </CardContent>

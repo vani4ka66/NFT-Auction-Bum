@@ -1,7 +1,7 @@
 
-import Card from "../src/components/card/Card";
+import Trending from "../src/components/trending/Trending";
 
 
 export default function Index() {
-  return <Card />;
+  return <Trending />;
 }
