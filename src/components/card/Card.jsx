@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import millify from "millify";
 
-export default function Card({name="fdkflk", likes=0, mediaUrl, price, currency, user}) {
+export default function Card({name="", likes=0, mediaUrl, price, currency, user}) {
 
     const [like, setLike] = useState(0)
 

@@ -23,11 +23,11 @@ export default function Trending({cards=[]}) {
         </Grid>
        
         <Grid container spacing={2}>
-            {cards.map(element => {
-                <Grid item xs={3}>
-                    <Card {...element} />
-                </Grid >
-            })}
+            {(cards.map(card => {
+               return   <Grid item xs={3}>
+                            <Card {...card} />
+                        </Grid >
+            }))}
         </Grid>
     </Container>
   );
