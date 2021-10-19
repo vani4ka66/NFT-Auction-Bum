@@ -7,18 +7,7 @@ import Select from '@mui/material/Select';
 import { Grid } from "@mui/material";
 import { MenuItem } from "@mui/material";
 
-export default function Trending({cards=[ {
-    name: "Ivy",
-    user: {avatarUrl: "/images/avatar.png", verified: true},
-    mediaUrl: "/images/nft.jpg",
-    price: 1, 
-    currency: "ETH"
-}, 
-{
-    name: "Julie",
-    user: {avatarUrl: "/images/avatar.png", verified: true},
-    mediaUrl: "/images/nft.jpg",
-},]}) {
+export default function Trending({cards=[]}) {
 
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
