@@ -1,7 +1,7 @@
 
-import Trending from "../src/components/trending/Trending";
+import Footer from "../src/components/footer/Footer";
 
 
 export default function Index() {
-  return <Trending />;
+  return <Footer />;
 }
