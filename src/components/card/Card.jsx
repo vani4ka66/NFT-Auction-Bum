@@ -24,7 +24,6 @@ export default function Card({name="", likes=0, mediaUrl, price, currency, user}
 
             <CardActions color="text.secondary">
                 <CardContent variant="body2" color="text.secondary">
-                    {/* <div className="title"></div> */}
                     <div className="Card_title">{name}</div>
                     <div className="price">~{price}  {currency}</div>
                 </CardContent>
