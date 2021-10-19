@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import millify from "millify";
 
-export default function Card({name="", title="", likes=0, mediaUrl, price, currency, user}) {
+export default function Card({name="", likes=0, mediaUrl, price, currency, user}) {
 
     const [like, setLike] = useState(0)
 
@@ -24,7 +24,7 @@ export default function Card({name="", title="", likes=0, mediaUrl, price, curre
 
             <CardActions color="text.secondary">
                 <CardContent variant="body2" color="text.secondary">
-                    <div className="title">{title}</div>
+                    <div className="title"></div>
                     <div className="name">{name}</div>
                     <div className="price">~{price}  {currency}</div>
                 </CardContent>
