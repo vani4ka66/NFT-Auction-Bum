@@ -9,18 +9,28 @@ import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import millify from "millify";
+import Countdown from 'react-countdown';
+// import LiveIcon from '@mui/icons-material/IconLive';
 
-export default function Card({name="", likes=0, mediaUrl, price, currency, user}) {
+
+export default function Card({name="", likes=0, mediaUrl, price, currency, user, timeLeft=2000}) {
 
     const [like, setLike] = useState(0)
 
   return (
-        <MuiCard sx={{ maxWidth: 345 }}>
+        <MuiCard className={classNames(styles.card)} sx={{ maxWidth: 345 }}>
             <CardHeader
                 avatar={<Avatar {...user} />}
             />
+
+            <div className={classNames(styles.imgWrapper)}>
+                {timeLeft > 0 && <div className={classNames(styles.badge)}>Live</div> }
+                
+                <img className={classNames(styles.media)} src="/images/nft.jpg" alt="pic" />
+
+                {timeLeft > 0 && <Countdown className={classNames(styles.cowntdown)} date={Date.now() + timeLeft} />}
+            </div>
            
-            <img className={classNames(styles.media)} src="/images/nft.jpg" alt="pic" />
 
             <CardActions color="text.secondary">
                 <CardContent variant="body2" color="text.secondary">
