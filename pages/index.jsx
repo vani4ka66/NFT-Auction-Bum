@@ -1,8 +1,8 @@
 
 import Footer from "../src/components/footer/Footer";
-import Card from "../src/components/card/Card";
+import Auctions from "../src/components/auctions/Auctions";
 
 
 export default function Index() {
-  return <Card />;
+  return <Auctions />;
 }
