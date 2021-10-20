@@ -13,7 +13,7 @@ import Countdown from 'react-countdown';
 // import LiveIcon from '@mui/icons-material/IconLive';
 
 
-export default function Card({name="", likes=0, mediaUrl, price, currency, user, timeLeft=2000}) {
+export default function Card({name="", likes=0, mediaUrl, price, currency, user, timeLeft=22}) {
 
     const [like, setLike] = useState(0)
 
@@ -23,7 +23,7 @@ export default function Card({name="", likes=0, mediaUrl, price, currency, user,
                 avatar={<Avatar {...user} />}
             />
 
-            <div className={classNames(styles.imgWrapper)}>
+            <div className={classNames(styles.liveWrapper)}>
                 {timeLeft > 0 && <div className={classNames(styles.badge)}>Live</div> }
                 
                 <img className={classNames(styles.media)} src="/images/nft.jpg" alt="pic" />
