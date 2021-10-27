@@ -1,8 +1,8 @@
 
-import Footer from "../src/components/footer/Footer";
-import Card from "../src/components/card/Card";
+import Featured from "../src/components/featured/Featured";
+import How from "../src/components/how/How";
 
 
 export default function Index() {
-  return <Card />;
+  return <How />;
 }
