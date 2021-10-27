@@ -2,28 +2,12 @@ import React, { useState } from "react"
 import Container from "@mui/material/Container";
 import styles from "./How.module.scss";
 import classNames from "classnames";
-import Step from "../step/Step"
+import HowStep from "./HowStep"
 import { Grid } from "@mui/material";
 
 
-export default function How({description="", title="", itemssssss=[], link=""}) {
-
-    const items = [
-        {
-            title: "A",
-            description: "jdklsdfjfjoewf",
-        },
-        {
-            title: "A",
-            description: "jdklsdfjfjoewf",
-        },
-        {
-            title: "A",
-            description: "jdklsdfjfjoewf",
-        },
-    ]
+export default function How({description="", title="", items=[], link=""}) {
        
-
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
          <Grid container spacing={2}>
@@ -33,16 +17,11 @@ export default function How({description="", title="", itemssssss=[], link=""}) 
                 <a href={link} target="_blank">LEARN MORE </a>
             </Grid >
             <Grid item xs={4}>
-                {(items.map((i, index) => {
+                {(items.map((item, index) => {
                 return  <Grid item xs={12}>
-                            {<Step number={index} {...i} /> }
+                            {<HowStep number={index} {...item} /> }
                         </Grid >
                 }))}
-
-                {/* return  <Grid item xs={12}>
-                            {<Step {...i} /> }
-                        </Grid >
-                }))} */}
             </Grid >
         </Grid>
     </Container>
