@@ -18,7 +18,7 @@ export default function Featured({items=[]}) {
     return (
         <Container className={classNames(styles.container)} maxWidth="xl">
             <ImageList
-                sx={{ width: 500, height: 250 }}
+                // sx={{ width: 500, height: 250 }}
                 variant="quilted"
                 cols={6}
             >
