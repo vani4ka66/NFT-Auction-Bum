@@ -7,10 +7,8 @@ import { useRouter } from 'next/router'
 
 function srcset(image, size, rows = 1, cols = 1) {
     return {
-        src: `${image}?w=${size * cols}&h=${size * rows}`,
-        srcSet: `${image}?w=${size * cols}&h=${
-            size * rows
-        }`,
+        src: `${image}`,
+        srcSet: `${image}`,
     };
 }
   
