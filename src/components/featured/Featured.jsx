@@ -5,7 +5,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useRouter } from 'next/router'
 
-function srcset(image, size, rows = 1, cols = 1) {
+function srcset(image) {
     return {
         src: `${image}`,
         srcSet: `${image}`,
