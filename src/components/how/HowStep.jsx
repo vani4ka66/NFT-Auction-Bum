@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import Container from "@mui/material/Container";
-import styles from "./How.module.scss";
+import styles from "./HowStep.module.scss";
 import classNames from "classnames";
-import HowStep from "../howstep/HowStep"
+import Step from "../step/Step"
 import { Grid } from "@mui/material";
 
 
-export default function How({description="", title="", items=[], link=""}) {
+export default function HowStep({description="", title="", items=[], link=""}) {
        
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
@@ -19,7 +19,7 @@ export default function How({description="", title="", items=[], link=""}) {
             <Grid item xs={4}>
                 {(items.map((item, index) => {
                 return  <Grid item xs={12}>
-                            {<HowStep number={index} {...item} /> }
+                            {<Step number={index} {...item} /> }
                         </Grid >
                 }))}
             </Grid >
