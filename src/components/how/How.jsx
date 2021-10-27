@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Container from "@mui/material/Container";
 import styles from "./How.module.scss";
 import classNames from "classnames";
-import Step from "../step/Step"
+import HowStep from "./HowStep"
 import { Grid } from "@mui/material";
 
 
@@ -19,7 +19,7 @@ export default function How({description="", title="", items=[], link=""}) {
             <Grid item xs={4}>
                 {(items.map((item, index) => {
                 return  <Grid item xs={12}>
-                            {<Step number={index} {...item} /> }
+                            {<HowStep number={index} {...item} /> }
                         </Grid >
                 }))}
             </Grid >
