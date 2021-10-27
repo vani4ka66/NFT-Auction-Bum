@@ -1,10 +1,8 @@
-import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
 import styles from "./Featured.module.scss";
 import classNames from "classnames";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { useRouter } from 'next/router'
 
 function srcset(image, size, rows = 1, cols = 1) {
@@ -12,7 +10,7 @@ function srcset(image, size, rows = 1, cols = 1) {
         src: `${image}?w=${size * cols}&h=${size * rows}`,
         srcSet: `${image}?w=${size * cols}&h=${
             size * rows
-        }&fit=crop&auto=format&dpr=2 2x`,
+        }`,
     };
 }
   
@@ -25,7 +23,6 @@ export default function Featured({items=[]}) {
                 sx={{ width: 500, height: 250 }}
                 variant="quilted"
                 cols={6}
-                // rowHeight={131}
             >
                 {items.map((item) => {
                     return (
