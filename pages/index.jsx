@@ -1,8 +1,8 @@
 
-import Footer from "../src/components/footer/Footer";
+import Featured from "../src/components/featured/Featured";
 import Auctions from "../src/components/auctions/Auctions";
 
 
 export default function Index() {
-  return <Auctions />;
+  return <Featured />;
 }
