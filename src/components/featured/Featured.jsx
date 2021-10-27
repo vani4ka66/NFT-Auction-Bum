@@ -7,49 +7,6 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { useRouter } from 'next/router'
 
-  const items = [
-    {
-        image: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-        title: "Breakfast",
-        rows: 2,
-        cols: 3,
-        href: "/about"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-        title: "Camera",
-        href: "/home"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-        title: "Lunck",
-        href: "/contact"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-        title: "Lunck",
-        href: "/contact"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-        title: "Lunck",
-        href: "/contact"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-        title: "Lunck",
-        href: "/contact"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-        title: "Lunck",
-        href: "/contact"
-    },
-    
-]
-
-// export default function Featured({ite=[]}) {
-
 function srcset(image, size, rows = 1, cols = 1) {
     return {
         src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -59,7 +16,7 @@ function srcset(image, size, rows = 1, cols = 1) {
     };
 }
   
-  export default function Featured() {
+export default function Featured({items=[]}) {
     const router = useRouter()
 
     return (
@@ -96,4 +53,4 @@ function srcset(image, size, rows = 1, cols = 1) {
             </ImageList>
       </Container>
     );
-  }
+}

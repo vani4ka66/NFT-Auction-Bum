@@ -1,8 +1,8 @@
 
 import Featured from "../src/components/featured/Featured";
-import Auctions from "../src/components/auctions/Auctions";
+import How from "../src/components/how/How";
 
 
 export default function Index() {
-  return <Featured />;
+  return <How />;
 }
