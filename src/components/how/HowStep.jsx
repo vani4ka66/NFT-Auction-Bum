@@ -5,7 +5,7 @@ import classNames from "classnames";
 import { Grid } from "@mui/material";
 
 
-export default function Step({number=0, title="", description=""}) {
+export default function HowStep({number=0, title="", description=""}) {
 
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
