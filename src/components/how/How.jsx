@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import Container from "@mui/material/Container";
-import styles from "./HowStep.module.scss";
+import styles from "./How.module.scss";
 import classNames from "classnames";
 import Step from "../step/Step"
 import { Grid } from "@mui/material";
 
 
-export default function HowStep({description="", title="", items=[], link=""}) {
+export default function How({description="", title="", items=[], link=""}) {
        
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">

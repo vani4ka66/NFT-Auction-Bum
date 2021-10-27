@@ -1,8 +1,8 @@
 
 import Featured from "../src/components/featured/Featured";
-import HowStep from "../src/components/how/HowStep";
+import How from "../src/components/how/How";
 
 
 export default function Index() {
-  return <HowStep />;
+  return <How />;
 }
