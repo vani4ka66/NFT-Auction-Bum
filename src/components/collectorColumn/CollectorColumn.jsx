@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import Container from "@mui/material/Container";
-import styles from "./CollectorsColumn.module.scss";
+import styles from "./CollectorColumn.module.scss";
 import classNames from "classnames";
 import { Grid } from "@mui/material";
 import Collector from "../collector/Collector"
 
 
-export default function CollectorsColumn({items=[]}) {
+export default function CollectorColumn({items=[]}) {
        
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
