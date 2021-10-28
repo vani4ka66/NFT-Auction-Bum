@@ -11,7 +11,7 @@ function srcset(image) {
         srcSet: `${image}`,
     };
 }
-  
+
 export default function Featured({items=[]}) {
     const router = useRouter()
 

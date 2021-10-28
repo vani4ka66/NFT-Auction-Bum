@@ -1,8 +1,8 @@
 
-import Featured from "../src/components/featured/Featured";
+import CollectorsColumn from "../src/components/collectorsColumn/CollectorsColumn";
 import How from "../src/components/how/How";
 
 
 export default function Index() {
-  return <Featured />;
+  return <CollectorsColumn />;
 }
