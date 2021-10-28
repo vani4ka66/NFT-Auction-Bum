@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import styles from "./CollectorColumn.module.scss";
 import classNames from "classnames";
 import { Grid } from "@mui/material";
-import Collector from "../collector/Collector"
+import Collector from "./Collector"
 
 
 export default function CollectorColumn({items=[]}) {
@@ -14,7 +14,7 @@ export default function CollectorColumn({items=[]}) {
             <Grid item xs={12}>
                 {(items.map((item, index) => {
                 return  <Grid item xs={12}>
-                            {<Collector number={item.nftsCount} {...item} /> }
+                            {<Collector {...item} /> }
                         </Grid >
                 }))}
             </Grid >

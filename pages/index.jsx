@@ -1,5 +1,5 @@
 
-import CollectorColumn from "../src/components/collectorColumn/CollectorColumn";
+import CollectorColumn from "../src/components/collectors/CollectorColumn";
 import How from "../src/components/how/How";
 
 
