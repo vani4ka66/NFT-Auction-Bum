@@ -14,7 +14,7 @@ export default function CollectorColumn({items=[]}) {
             <Grid item xs={12}>
                 {(items.map((item, index) => {
                 return  <Grid item xs={12}>
-                            {<Collector number={index} {...item} /> }
+                            {<Collector {...item} /> }
                         </Grid >
                 }))}
             </Grid >
