@@ -12,7 +12,7 @@ export default function Collector({type}) {
     <Container className={classNames(styles.container)} maxWidth="xl">
          <Grid container spacing={2}>
             <Grid item xs={2}>
-                <div className={type.light}></div>
+                <div className="light">{type}</div>
             </Grid >
 
             <Grid item xs={10}>
