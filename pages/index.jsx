@@ -6,5 +6,5 @@ import Collector from "../src/components/collectors/Collector";
 
 
 export default function Index() {
-  return <CollectorColumn />;
+  return <Collector />;
 }
