@@ -10,9 +10,9 @@ export default function Collector({type}) {
        
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
-         <Grid container spacing={2}>
+         <Grid container className={type==2 && classNames(styles.light)} spacing={2}>
             <Grid item xs={2}>
-                <div className={type==2 && classNames(styles.light)}>{type}</div>
+                <div>{type}</div>
             </Grid >
 
             <Grid item xs={10}>
