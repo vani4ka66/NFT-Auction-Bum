@@ -6,13 +6,13 @@ import { Grid } from "@mui/material";
 import User from "../user/User"
 
 
-export default function Collector({type}) {
+export default function Collector({name, nftsCount, avatar, verified, id, type}) {
        
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
-         <Grid container className={type==2 && classNames(styles.light)} spacing={2}>
+         <Grid container className={type} spacing={2}>
             <Grid item xs={2}>
-                <div>{type}</div>
+                <div >{nftsCount}</div>
             </Grid >
 
             <Grid item xs={10}>
