@@ -10,41 +10,7 @@ import chunk from 'lodash.chunk';
 
 export default function TopCollectors({collectors=[]}) {
 
-    const collectorss = [
-        {
-            name: "aaaaa",
-            nftCount: 1,
-            avatar: "",
-            verified: true
-        },
-        {
-            name: "bbbbb",
-            nftCount: 2,
-            avatar: "",
-            verified: true
-        },
-        {
-            name: "cccccc",
-            nftCount: 3,
-            avatar: "",
-            verified: true
-        },
-        {
-            name: "ddddd",
-            nftCount: 4,
-            avatar: "",
-            verified: true
-        },
-        {
-            name: "fffff",
-            nftCount: 5,
-            avatar: "",
-            verified: true
-        },
-    ]
-
-    var newArr = chunk(collectors, 3);
-    
+var newArr = chunk(collectors, 3);
 
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
