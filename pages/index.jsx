@@ -15,7 +15,7 @@ export default function Index({items=[], cards=[], collectors=[]}) {
       <Header />
       <Featured items={items} />
       <Trending cards={cards} />
-      <TopCollectors collectors={collectors.sort(function(a, b){return a-b}) } />
+      <TopCollectors collectors={collectors.sort(function(a, b){return b-a}) } />
       <How />
       <Auctions />
       <Footer />
