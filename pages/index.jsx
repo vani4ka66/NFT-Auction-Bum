@@ -6,7 +6,6 @@ import TopCollectors from "../src/components/collectors/TopCollectors";
 import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Collector from "../src/components/collectors/Collector";
-import Trending from "../src/components/trending/Trending";
 
 
 
@@ -16,9 +15,9 @@ export default function Index({items=[], cards=[], collectors=[]}) {
       <Header />
       <Featured items={items} />
       <Trending cards={cards} />
-      <TopCollectors collectors={collectors} />
+      <TopCollectors collectors={collectors.sort(function(a, b){return a-b}) } />
       <How />
-      <Auctions cards={cards}/>
+      <Auctions />
       <Footer />
   </div>
 
