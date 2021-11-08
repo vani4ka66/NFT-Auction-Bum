@@ -6,6 +6,7 @@ import CollectorColums from "../collectors/CollectorColumn"
 import Select from '@mui/material/Select';
 import { Grid } from "@mui/material";
 import { MenuItem } from "@mui/material";
+import chunk from 'lodash.chunk';
 
 export default function TopCollectors({collectors=[]}) {
 
@@ -42,7 +43,8 @@ export default function TopCollectors({collectors=[]}) {
         },
     ]
 
-    // var asasas = _.chunk(collectorss, 3);
+    var newArr = chunk(collectors, 3);
+    
 
   return (
     <Container className={classNames(styles.container)} maxWidth="xl">
@@ -58,7 +60,7 @@ export default function TopCollectors({collectors=[]}) {
         </Grid>
        
         <Grid container spacing={2}>
-            {(collectors.map(collector => {
+            {(newArr.map(collector => {
                return   <Grid item xs={3}>
                             <CollectorColums id={collector.id} {...collector} />
                             <div>djsdskdj</div>
