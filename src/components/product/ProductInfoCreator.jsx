@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import styles from "./ProductInfoCreator.module.scss";
 import classNames from "classnames";
-import { Chip } from '@mui/material';
 import User from "../user/User";
 
 

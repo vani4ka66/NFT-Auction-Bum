@@ -5,7 +5,7 @@ import Trending from "../src/components/trending/Trending";
 import TopCollectors from "../src/components/collectors/TopCollectors";
 import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
-import ProductInfoCreator from "../src/components/product/ProductInfoCreator";
+import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
 
 
 export default function Index({items=[], cards=[], collectors=[]}) {
@@ -17,7 +17,7 @@ export default function Index({items=[], cards=[], collectors=[]}) {
       <How />
       <Auctions cards={cards} />
       <Footer />
-      <ProductInfoCreator />
+      <ProductInfoTimer />
   </div>
 
 
