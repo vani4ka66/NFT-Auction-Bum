@@ -6,7 +6,7 @@ import classNames from "classnames";
 export default function ProductInfoPrice({amount=0, currency}) {
        
   return (
-      <div className="ProductImage_product-info-price">
+      <div className="ProductInfoPrice_product-info-price">
        <div>{amount} {currency}</div>
       </div>
   );
