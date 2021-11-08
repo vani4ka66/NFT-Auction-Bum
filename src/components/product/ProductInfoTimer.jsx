@@ -12,7 +12,7 @@ export default function ProductInfoTimer({timeEnd,onTimeEnd}) {
       <div className="ProductInfoTimer_product-info-timer">
             {timeEnd && <div className="timer">
                             <label className="ProductInfoTimer_title">Ends in</label>
-                            <Countdown date={Date.now() + 10000} />
+                            <Countdown className="ProductInfoTimer_active" onTimeEnd={onTimeEnd} />
                         </div>
             
             }
