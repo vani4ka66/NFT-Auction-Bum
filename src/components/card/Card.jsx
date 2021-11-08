@@ -8,7 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-// import millify from "millify";
+import millify from "millify";
 // import Countdown from 'react-countdown';
 // import LiveIcon from '@mui/icons-material/IconLive';
 
