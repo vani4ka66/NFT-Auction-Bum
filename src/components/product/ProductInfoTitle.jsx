@@ -6,10 +6,10 @@ import { Typography } from '@mui/material';
 
 export default function ProductInfoTitle({text}) {
   return (
-    <div className="product-info-title">
+    <div className="ProductInfoTitle_product-info-title">
       <Container className={classNames(styles.container)} maxWidth="xl">
         <Typography variant="h1" component="h2">
-               {text}
+               <h1>{text}</h1>
         </Typography>;
       </Container>
     </div>
