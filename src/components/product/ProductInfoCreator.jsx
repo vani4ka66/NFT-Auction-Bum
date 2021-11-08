@@ -10,8 +10,8 @@ export default function ProductInfoCreator({name, avatar, verified=false}) {
        
   return (
       <div className="ProductInfoCreator_product-info-creator">
-        <label className="title">Creator</label>
         <div className="user-container">
+            <label className="title">Creator</label>
             <User name={name} avatar={avatar} verified={verified} />
         </div>
        
