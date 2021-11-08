@@ -6,6 +6,7 @@ import TopCollectors from "../src/components/collectors/TopCollectors";
 import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 
+
 export default function Index({items=[], cards=[], collectors=[]}) {
   return <div className="container">
       <Header />
