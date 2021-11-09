@@ -5,19 +5,19 @@ import Trending from "../src/components/trending/Trending";
 import TopCollectors from "../src/components/collectors/TopCollectors";
 import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
-import ProductInfoTimer from "../src/components/product/ProductInfoTimer";
+import ProductInfo from "../src/components/product/ProductInfo";
 
 
 export default function Index({items=[], cards=[], collectors=[]}) {
   return <div className="container">
-      <Header />
+      {/* <Header />
       <Featured items={items} />
       <Trending cards={cards} />
       <TopCollectors collectors={collectors.sort(function(a, b){return b-a}) } />
       <How />
       <Auctions cards={cards} />
-      <Footer />
-      <ProductInfoTimer />
+      <Footer /> */}
+      <ProductInfo />
   </div>
 
 
