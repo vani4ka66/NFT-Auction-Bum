@@ -7,8 +7,8 @@ export default function ProductInfoTimer({timeEnd,onTimeEnd}) {
        
   return (
       <div className="ProductInfoTimer_product-info-timer">
-            {!timeEnd && <div className="timer">
-                            <label className="ProductInfoTimer_title">Ends in</label>
+            {timeEnd && <div className="timer">
+                            <label className="title">Ends in</label>
                             <Countdown onTimeEnd={onTimeEnd} />
                         </div>
             
