@@ -10,7 +10,7 @@ export default function ProductInfoTitle({text}) {
       <Container className={classNames(styles.container)} maxWidth="xl">
         <Typography variant="h1" component="h2">
                <h1>{text}</h1>
-        </Typography>;
+        </Typography>
       </Container>
     </div>
   );
