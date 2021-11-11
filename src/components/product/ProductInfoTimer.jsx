@@ -12,7 +12,7 @@ export default function ProductInfoTimer({timeEnd,onTimeEnd}) {
 
         <label className="title">Ends in</label>
            <div className="timer">
-              {timeEnd && <Countdown date={timeEnd} onStop={onTimeEnd} />}
+              {timeEnd !== null && <Countdown date={timeEnd} onStop={onTimeEnd} />}
           </div>
       </div>
   );
