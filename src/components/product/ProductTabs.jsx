@@ -8,15 +8,6 @@ import { parseISO, formatDistance } from 'date-fns'
 
 
 export default function ProductTabs({text, bids=[]}) {
-
-  const bidss = [
-    {
-      id: '1',
-      name: 'ldskdskd',
-      lastName: 'bbbbbb',
-      date: Date.now()
-    }
-  ]
        
   return (
         <div className="ProductTabs_product-tabs" maxWidth="xl">
