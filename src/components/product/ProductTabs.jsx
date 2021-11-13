@@ -2,18 +2,26 @@ import React, { useState } from "react"
 import styles from "./ProductInfo.module.scss";
 import classNames from "classnames";
 import User from "../user/User";
-import { TabContext, Container, Tab } from "@mui/material";
+import { Container, Tab, TableRow } from "@mui/material";
+import { TabContext } from '@mui/lab';
 
 
-export default function ProductTabs({text, bids}) {
+export default function ProductTabs({text, bids=[]}) {
        
   return (
-        <Container className="ProductInfo_product-tabs" maxWidth="xl">
+        <Container className={styles["product-tabs"]} maxWidth="xl">
 
-           {/* <TabContext className={`table-row-${text}`} direction="row" spacing={2}> */}
-                <Tab label="Details" className="tab-details" />
-                <Tab label="Bids" className="tab-bids" />
-            {/* </TabContext> */}
+            <TabContext label="Details" className="tab-details" value={text} />
+           
+           
+            {bids.map((bid, i) => {
+              <div>
+                <TableRow className={`table-row-${i}`} />
+                <TabContext label="Bids" className="tab-bids" value={bid} />
+               </div>
+            })}
+           
+            <User />
 
         </Container>
   )

@@ -18,7 +18,7 @@ export default function ProductInfo({title, creator, price, currency, likes, onT
         <div className={styles["product-info"]} maxWidth="xl">
            <ProductTitle title={title} />
 
-           <Stack className="stats" direction="row" spacing={2}>
+           <Stack className={styles["stats"]} direction="row" spacing={2}>
                 <ProductInfoPrice price={price} currency={currency} />
                 <ProductInfoLikes likes={likes} />
             </Stack>
