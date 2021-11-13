@@ -15,7 +15,7 @@ import { Grid, Container } from "@mui/material";
 export default function ProductInfo({title, creator, price, currency, likes, onTimeEnd,timeEnd, isLive}) {
        
   return (
-        <Container  className={styles["product-info"]} maxWidth="xl">
+        <div className={styles["product-info"]} maxWidth="xl">
            <ProductTitle title={title} />
 
            <Stack className="stats" direction="row" spacing={2}>
@@ -34,6 +34,6 @@ export default function ProductInfo({title, creator, price, currency, likes, onT
             </Grid>
 
             {isLive && <ProductInfoStatus />}
-        </Container>
+        </div>
   )
 }
