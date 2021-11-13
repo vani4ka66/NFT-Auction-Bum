@@ -15,7 +15,7 @@ import { Grid, Container } from "@mui/material";
 export default function ProductInfo({title, creator, price, currency, likes, onTimeEnd,timeEnd, isLive}) {
        
   return (
-        <Container className="ProductInfo_product-info" maxWidth="xl">
+        <Container  className={styles["product-info"]} maxWidth="xl">
            <ProductTitle title={title} />
 
            <Stack className="stats" direction="row" spacing={2}>
