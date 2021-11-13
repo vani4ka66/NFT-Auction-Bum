@@ -26,7 +26,7 @@ export default function ProductTabs({name, avatar, verified,text, bids=[]}) {
                   <Tab label="Bids" className="ProductsTab_tab-bids" />
                 </TabContext>
           
-              {(bidss.map((bid, i) => {
+              {(bids.map((bid, i) => {
                     return  <div>
                                <TableRow className={`table-row-${i}`} />
                                {/* {formatDistance(parseISO(bid.date), 'yyyy-MM-dd')} */}
