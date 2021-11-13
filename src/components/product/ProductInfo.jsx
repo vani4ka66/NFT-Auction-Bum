@@ -18,7 +18,7 @@ export default function ProductInfo({title, creator, price, currency, likes, onT
         <Container className="ProductInfo_product-info" maxWidth="xl">
            <ProductTitle title={title} />
 
-           <Stack direction="row" spacing={2}>
+           <Stack className="stats" direction="row" spacing={2}>
                 <ProductInfoPrice price={price} currency={currency} />
                 <ProductInfoLikes likes={likes} />
             </Stack>
@@ -29,7 +29,7 @@ export default function ProductInfo({title, creator, price, currency, likes, onT
                 </Grid >
 
                 <Grid item xs={5}>
-                    <ProductInfoTimer onTimeEnd={onTimeEnd} timeEnd={timeEnd} />
+                    <ProductInfoTimer onStop={onTimeEnd} date={timeEnd} />
                 </Grid >
             </Grid>
 
