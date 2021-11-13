@@ -7,7 +7,7 @@ import TabContext from '@mui/lab/TabContext';
 import { parseISO, formatDistance } from 'date-fns'
 
 
-export default function ProductTabs({text, bids=[]}) {
+export default function ProductTabs({name, avatar, verified,text, bids=[]}) {
 
   const bidss = [
     {
@@ -19,8 +19,8 @@ export default function ProductTabs({text, bids=[]}) {
   ]
        
   return (
-        <div className="ProductTabs_produst-tabs" maxWidth="xl">
-            <User />
+        <div className="ProductTabs_product-tabs" maxWidth="xl">
+            <User name={name} avatar={avatar} verified={verified} />
               <TabContext className="tab-details">
                   <Tab label="Details" className="ProductsTab_tab-details" />
                   <Tab label="Bids" className="ProductsTab_tab-bids" />
@@ -30,7 +30,7 @@ export default function ProductTabs({text, bids=[]}) {
                     return  <div>
                                <TableRow className={`table-row-${i}`} />
                                {/* {formatDistance(parseISO(bid.date), 'yyyy-MM-dd')} */}
-                              {/* {formatDistance(parseISO(bid.date))} */}
+                              {bid}
                             </div >
               }))}
         </div>
