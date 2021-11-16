@@ -2,14 +2,11 @@ import React, { useState } from "react"
 import styles from "./ProductInfo.module.scss";
 import classNames from "classnames";
 import User from "../user/User";
-import {  Tab, TabContext } from "@mui/material";
+import {  Tab, TabContext, TableCell, TableRow } from "@mui/material";
 import { parseISO, formatDistance } from 'date-fns'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+// import TableRow from '@mui/material/TableRow';
 
 export default function ProductTabs({text, bids=[]}) {
        
@@ -26,9 +23,9 @@ export default function ProductTabs({text, bids=[]}) {
                               return  <div>
                                           <TableRow className={`table-row-${i}`}>
                                                 {/* {formatDistance(parseISO(bid.date), 'yyyy-MM-dd')} */}
-                                                <TableCell>
+                                                {/* <TableCell> */}
                                                       <User {...bid} />
-                                                </TableCell>
+                                                {/* </TableCell> */}
                                                
                                           </TableRow>
                                     </div >
