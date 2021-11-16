@@ -30,10 +30,7 @@ export default function ProductTabs({text, bids=[]}) {
                                                       <User />
                                                 </TableCell>
                                                 <TableCell>
-                                                      {bid.amount}
-                                                </TableCell>
-                                                <TableCell>
-                                                      {bid.date}
+                                                      {...bid}
                                                 </TableCell>
                                           </TableRow>
                                     </div >
