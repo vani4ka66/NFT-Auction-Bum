@@ -2,8 +2,7 @@ import React, { useState } from "react"
 import styles from "./ProductInfo.module.scss";
 import classNames from "classnames";
 import User from "../user/User";
-import {  Tab, } from "@mui/material";
-import TabContext from '@mui/lab/TabContext';
+import {  Tab, TabContext } from "@mui/material";
 import { parseISO, formatDistance } from 'date-fns'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
