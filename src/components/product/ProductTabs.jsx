@@ -2,10 +2,8 @@ import React, { useState } from "react"
 import styles from "./ProductInfo.module.scss";
 import classNames from "classnames";
 import User from "../user/User";
-import {  Tab, TableRow } from "@mui/material";
-import TabContext from '@mui/lab/TabContext';
+import {  Tab, TableRow, TabContext } from "@mui/material";
 import { parseISO, formatDistance } from 'date-fns'
-
 
 export default function ProductTabs({text, bids=[]}) {
        
