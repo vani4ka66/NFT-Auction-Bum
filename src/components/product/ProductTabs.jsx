@@ -27,11 +27,9 @@ export default function ProductTabs({text, bids=[]}) {
                                           <TableRow className={`table-row-${i}`}>
                                                 {/* {formatDistance(parseISO(bid.date), 'yyyy-MM-dd')} */}
                                                 <TableCell>
-                                                      <User />
+                                                      <User {...bid} />
                                                 </TableCell>
-                                                <TableCell>
-                                                      {...bid}
-                                                </TableCell>
+                                               
                                           </TableRow>
                                     </div >
                         }))}
